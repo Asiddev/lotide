@@ -26,23 +26,21 @@ const assertEqual = function (actual, expected) {
   }
 };
 
-const countLetters = function (str) {
-  const letters = str.split("");
-  let solution = {};
-
-  for (let letter of letters) {
-    if (solution[letter]) {
-      solution[letter] += 1;
-    } else {
-      solution[letter] = 1;
-    }
-  }
-
-  console.log(solution);
-
-  return solution;
+const bestTVShowsByGenre = {
+  sci_fi: "The Expanse",
+  comedy: "Brooklyn Nine-Nine",
+  drama: "The Wire",
 };
 
-// console.log(countLetters("LHL"));
+const findKeyByValue = function (obj, str) {
+  for (let key of Object.keys(obj)) {
+    if (obj[key] === str) {
+      return key;
+    }
+  }
+  return obj[str];
+};
 
-console.log(assertEqual(countLetters("LHL"), { L: 2, H: 1 }));
+assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+assertEqual(findKeyByValue(bestTVShowsByGenre, "The Expanse"), "sci_fi");
