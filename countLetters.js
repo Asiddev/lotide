@@ -2,7 +2,7 @@ const assertEqual = function (actual, expected) {
   if (JSON.stringify(actual) === JSON.stringify(expected)) {
     console.log(
       `✅✅✅ Assertion Passed:${JSON.stringify(actual)} === ${JSON.stringify(
-        actual
+        expected
       )} `
     );
     return false;
