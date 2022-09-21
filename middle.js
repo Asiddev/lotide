@@ -43,6 +43,8 @@ const assertArraysEqual = function (arr1, arr2) {
 // console.log(middle([1, 2, 3, 4]));
 
 // console.log(assertArraysEqual(eqArrays(middle([1, 2, 3]), [3]), true));
+
+//removed else
 const middle = function (arr) {
   for (let i = 0; i < arr.length; i++) {
     if (arr.length % 2 !== 0) {
