@@ -21,25 +21,37 @@ const assertArraysEqual = function (arr1, arr2) {
   } else console.log(`🛑🛑🛑 Assertion Failed:${arr1} !== ${arr2} `);
 };
 
+// const middle = function (arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr.length % 2 !== 0) {
+//       let middle = Math.ceil(arr.length / 2);
+//       return [middle];
+//     } else {
+//       let first = Math.ceil(arr.length / 2);
+//       let second = Math.ceil(arr.length / 2) + 1;
+//       return [first, second];
+//     }
+//   }
+//   return middle;
+// };
+
+// console.log(middle([1, 2, 3, 4, 5, 6, 7]));
+// console.log(middle([1, 2, 3, 4, 5, 6, 7, 7]));
+// console.log(middle([1, 2, 3, 4, 5, 6, 7, 7, 6]));
+// console.log(middle([1, 2, 3, 4, 5, 6, 7, 7, 5]));
+// console.log(middle([1, 2, 3, 4, 5, 6, 7, 7, 5, 5]));
+// console.log(middle([1, 2, 3, 4]));
+
+// console.log(assertArraysEqual(eqArrays(middle([1, 2, 3]), [3]), true));
 const middle = function (arr) {
   for (let i = 0; i < arr.length; i++) {
     if (arr.length % 2 !== 0) {
       let middle = Math.ceil(arr.length / 2);
       return [middle];
-    } else {
-      let first = Math.ceil(arr.length / 2);
-      let second = Math.ceil(arr.length / 2) + 1;
-      return [first, second];
     }
+    let first = Math.ceil(arr.length / 2);
+    let second = Math.ceil(arr.length / 2) + 1;
+    return [first, second];
   }
   return middle;
 };
-
-console.log(middle([1, 2, 3, 4, 5, 6, 7]));
-console.log(middle([1, 2, 3, 4, 5, 6, 7, 7]));
-console.log(middle([1, 2, 3, 4, 5, 6, 7, 7, 6]));
-console.log(middle([1, 2, 3, 4, 5, 6, 7, 7, 5]));
-console.log(middle([1, 2, 3, 4, 5, 6, 7, 7, 5, 5]));
-// console.log(middle([1, 2, 3, 4]));
-
-// console.log(assertArraysEqual(eqArrays(middle([1, 2, 3]), [3]), true));
