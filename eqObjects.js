@@ -32,6 +32,7 @@ const eqObjects = function (object1, object2) {
   }
 
   for (let key of Object.keys(object1)) {
+    console.log(object1[key]);
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
       if (!eqArrays(object1[key], object2[key])) {
         return false;
@@ -42,6 +43,10 @@ const eqObjects = function (object1, object2) {
   }
   return true;
 };
+console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }));
+console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => false
+// console.log(eqObjects({ a: 1, b: 2 }, { a: 1, b: 2 }));
+console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 })); // recursive senario
 
 // const ab = { a: "1", b: "2" };
 // const ba = { b: "2", a: "1" };
@@ -60,13 +65,13 @@ const eqObjects = function (object1, object2) {
 
 //2
 
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-// console.log(eqObjects(cd, dc)); // => true
+// const cd = { c: "1", d: ["2", 3] };
+// const dc = { d: ["2", 3], c: "1" };
+// // console.log(eqObjects(cd, dc)); // => true
 
-assertEqual(eqObjects(cd, dc), true);
+// assertEqual(eqObjects(cd, dc), true);
 
-const cd2 = { c: "1", d: ["2", 3, 4] };
-// console.log(eqObjects(cd, cd2)); // => false
+// const cd2 = { c: "1", d: ["2", 3, 4] };
+// // console.log(eqObjects(cd, cd2)); // => false
 
-assertEqual(eqObjects(cd, cd2), false);
+// assertEqual(eqObjects(cd, cd2), false);
