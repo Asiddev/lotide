@@ -37,16 +37,17 @@ const eqObjects = function (object1, object2) {
       if (!eqArrays(object1[key], object2[key])) {
         return false;
       }
-    } else if (object1[key] !== object2[key]) { //This is where we implement recusively calling eqObjects
+    } else if (object1[key] !== object2[key]) {
+      //This is where we implement recusively calling eqObjects
       return false;
     }
   }
   return true;
 };
-console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }));
-console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => false
-// console.log(eqObjects({ a: 1, b: 2 }, { a: 1, b: 2 }));
-console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 })); // recursive senario
+// console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }));
+// console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => false
+// // console.log(eqObjects({ a: 1, b: 2 }, { a: 1, b: 2 }));
+// console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 })); // recursive senario
 
 // const ab = { a: "1", b: "2" };
 // const ba = { b: "2", a: "1" };
@@ -75,3 +76,5 @@ console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 })); // recursiv
 // // console.log(eqObjects(cd, cd2)); // => false
 
 // assertEqual(eqObjects(cd, cd2), false);
+
+module.exports = eqObjects;

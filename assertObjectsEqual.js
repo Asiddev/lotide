@@ -43,14 +43,16 @@ const assertObjectsEqual = function (actual, expected) {
     );
 };
 
-assertObjectsEqual({ a: 1, b: 1 }, { a: 1, b: 1 }); // ---> true
+// assertObjectsEqual({ a: 1, b: 1 }, { a: 1, b: 1 }); // ---> true
 
-assertObjectsEqual({ a: 1, b: 1 }, { a: 1, b: 2 }); // ---> false
+// assertObjectsEqual({ a: 1, b: 1 }, { a: 1, b: 2 }); // ---> false
 
-assertObjectsEqual({ b: 2, a: 1 }, { a: 1, b: 2 }); // ---> true
+// assertObjectsEqual({ b: 2, a: 1 }, { a: 1, b: 2 }); // ---> true
 
-assertObjectsEqual({ a: 1, b: [1, 2] }, { a: 1, b: 1 }); // ---> false
+// assertObjectsEqual({ a: 1, b: [1, 2] }, { a: 1, b: 1 }); // ---> false
 
-assertObjectsEqual({ a: 1, b: [1, 2] }, { a: 1, b: [1, 2] }); // ---> true
+// assertObjectsEqual({ a: 1, b: [1, 2] }, { a: 1, b: [1, 2] }); // ---> true
 
-assertObjectsEqual({ a: 1, b: [1, 2] }, { a: 1, b: [1, 2, 3] }); // ---> false
+// assertObjectsEqual({ a: 1, b: [1, 2] }, { a: 1, b: [1, 2, 3] }); // ---> false
+
+module.exports = assertObjectsEqual;

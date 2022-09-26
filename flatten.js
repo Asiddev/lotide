@@ -38,13 +38,15 @@ const flatten = function (arr) {
   return finalOutput;
 };
 
-console.log(flatten([1, 2, [3, 4], 5, [6]]));
+// console.log(flatten([1, 2, [3, 4], 5, [6]]));
 
-console.log(eqArrays(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6])); // => [1, 2, 3, 4, 5, 6]
+// console.log(eqArrays(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6])); // => [1, 2, 3, 4, 5, 6]
 
-console.log(
-  assertArraysEqual(
-    eqArrays(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]),
-    true
-  )
-);
+// console.log(
+//   assertArraysEqual(
+//     eqArrays(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]),
+//     true
+//   )
+// );
+
+module.exports = flatten;
