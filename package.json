@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@asiddev/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "a useful testing library",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/Asiddev/lotide.git"
   },
-  "author": "",
+  "author": "Alexander Sidorenko",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Asiddev/lotide/issues"
