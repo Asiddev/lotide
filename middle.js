@@ -35,15 +35,6 @@ const assertArraysEqual = function (arr1, arr2) {
 //   return middle;
 // };
 
-// console.log(middle([1, 2, 3, 4, 5, 6, 7]));
-// console.log(middle([1, 2, 3, 4, 5, 6, 7, 7]));
-// console.log(middle([1, 2, 3, 4, 5, 6, 7, 7, 6]));
-// console.log(middle([1, 2, 3, 4, 5, 6, 7, 7, 5]));
-// console.log(middle([1, 2, 3, 4, 5, 6, 7, 7, 5, 5]));
-// console.log(middle([1, 2, 3, 4]));
-
-// console.log(assertArraysEqual(eqArrays(middle([1, 2, 3]), [3]), true));
-
 //removed else
 const middle = function (arr) {
   for (let i = 0; i < arr.length; i++) {
@@ -57,3 +48,5 @@ const middle = function (arr) {
   }
   return middle;
 };
+
+module.exports = middle;
